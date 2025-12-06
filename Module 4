@@ -1,0 +1,31 @@
+//PART 1
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float n1, n2, n3;
+
+    cout << "Enter three numbers: ";
+    cin >> n1 >> n2 >> n3; // Use >> for each input, not >
+
+    if (n1 >= n2) {
+        // Now compare n1 with n3
+        if (n1 >= n3) {
+            cout << "Largest number: " << n1;
+        } else {
+            cout << "Largest number: " << n3;
+        }
+    } else {
+        // n2 is greater than n1, so compare n2 with n3
+        if (n2 >= n3) {
+            cout << "Largest number: " << n2;
+        } else {
+            cout << "Largest number: " << n3;
+        }
+    }
+
+    return 0;
+}
+
+
