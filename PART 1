@@ -1,0 +1,50 @@
+//PART 2
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int choice;
+    string items[3];   // Store up to 3 items
+    int count = 0;     // Track number of items added
+
+    do {
+        cout << "\n--- MENU ---\n";
+        cout << "1. Add Item\n";
+        cout << "2. View Items\n";
+        cout << "3. Exit\n";
+        cout << "Choose an option: ";
+        cin >> choice;
+
+        if (choice == 1) {
+            if (count < 3) {
+                cout << "Enter item name: ";
+                cin >> items[count];
+                count++;
+                cout << "Item added!\n";
+            } else {
+                cout << "You can only add 3 items.\n";
+            }
+        }
+        else if (choice == 2) {
+            cout << "\nYour items:\n";
+            if (count == 0) {
+                cout << "No items added yet.\n";
+            } else {
+                for (int i = 0; i < count; i++) {
+                    cout << i + 1 << ". " << items[i] << endl;
+                }
+            }
+        }
+        else if (choice == 3) {
+            cout << "Exiting...\n";
+        }
+        else {
+            cout << "Invalid option.\n";
+        }
+
+    } while (choice != 3);
+
+    return 0;
+}
