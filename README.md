@@ -1,6 +1,9 @@
 # Week7-CIS-25
 
 Part 1
+The code is a simple menu up to a value of 3 items
+It asks for user input to make a list based on what the user types in
+After 3 items, the code will state that it can only be 3 items
 
 
 
